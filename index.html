@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KasperAIChain ($KAC) - Fair Launch</title>
+  <style>
+    body {
+      background: #0f1117;
+      color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    img.logo {
+      width: 160px;
+      margin-bottom: 20px;
+    }
+    .banner {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      color: #00ffe5;
+      font-size: 2.2rem;
+    }
+    .countdown {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+    .tokenomics, .roadmap {
+      background: #1c1f2a;
+      padding: 20px;
+      margin: 30px auto;
+      border-radius: 10px;
+      max-width: 500px;
+    }
+    a.launch-btn {
+      background: #00ffe5;
+      color: #000;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-weight: bold;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 20px 10px 0 10px;
+      transition: background 0.3s;
+    }
+    a.launch-btn:hover {
+      background: #00cfc0;
+    }
+    .socials {
+      margin-top: 30px;
+    }
+    .socials a {
+      margin: 0 10px;
+      color: #00ffe5;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    audio {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <img src="KAC_logo.png" alt="KAC Logo" class="logo">
+  <img src="KasperAIChain_Banner_Optimized.png" alt="Banner" class="banner">
+
+  <h1>KasperAIChain ($KAC)</h1>
+  <p>AI-powered meme utility token. Fair launch live on PinkSale.</p>
+
+  <div class="countdown">
+    <strong>Fair Launch Starts In:</strong><br>
+    <span id="timer">Loading countdown...</span>
+  </div>
+
+  <div class="tokenomics">
+    <h2>Tokenomics</h2>
+    <p><strong>Total Supply:</strong> 1,000,000,000 KAC</p>
+    <p><strong>Fair Launch:</strong> 500,000,000</p>
+    <p><strong>Liquidity Pool:</strong> 300,000,000</p>
+    <p><strong>Dev & Marketing:</strong> 100,000,000</p>
+    <p><strong>Burn/Reserve:</strong> 100,000,000</p>
+  </div>
+
+  <div class="roadmap">
+    <h2>Roadmap</h2>
+    <p><strong>Phase 1:</strong> Token Creation & Website Launch</p>
+    <p><strong>Phase 2:</strong> Fair Launch on PinkSale</p>
+    <p><strong>Phase 3:</strong> Listings on DEX & CoinTrackers</p>
+    <p><strong>Phase 4:</strong> Community Events & Airdrops</p>
+    <p><strong>Phase 5:</strong> KasperAI Utility Development</p>
+  </div>
+
+  <a href="https://www.pinksale.finance/" target="_blank" class="launch-btn">Join Fair Launch</a>
+
+  <div class="socials">
+    <a href="https://t.me/KasperAIChain" target="_blank">Telegram</a>
+    <a href="https://twitter.com/KasperAIChain" target="_blank">Twitter</a>
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-dubstep.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const targetDate = new Date("2025-06-06T18:00:00+02:00").getTime();
+    const timer = document.getElementById("timer");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      if (distance < 0) {
+        timer.innerHTML = "🚀 Live Now!";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
